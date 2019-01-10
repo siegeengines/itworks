@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title> ItWorks </title>
+	</head>
+
+	<body>
+		<h1> Here are your results </h1>
+		<p> {{range .}} <div> <b> User: {{.Username}} Time ID: {{.Timestamp}}  Votes: {{.Votes}}</b> {{.Content}} <b> 
+			<select name = "choice">
+				<option value={{.IDu}}> Upvote </option>
+				<option value={{.IDd}}> Downvote </option>
+			</select>
+			<input type="submit" value="Enter">
+		</b></div> {{end}} </p>
+
+		<h3> <a href="/logout"> Log out </a> </h3> 
+		<h3> <a href="/delete"> Delete account </a> </h3> 
+
+	</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title> ItWorks </title>
+	</head>
+
+	<body>
+		<h1> Home </h1>
+		<h2> A platform for crowdsourcing good solutions to your problems! </h2>
+
+		<form action = "/main" method="post">
+			Ask a question or share a solution:
+				<input type ="text" name="input"> <br>
+			<select name = "choice">
+				<option value="question"> This is a question </option>
+				<option value="solution"> This is a solution </option>
+			</select>
+			<input type="submit" value="Enter">
+		</form>
+
+		<p> {{range .}} <div> <b> Votes: {{.Votes}} User: {{.Username}} Time: {{.Timestamp}} </b> {{.Content}} <b> 
+			<form action = "/main" method = "post">
+				<select name="choice1">
+					<option value={{.IDu}}> Upvote </option>
+					<option value={{.IDd}}> Downvote </option>
+					<option value={{.IDf}}> Flag Post </option>
+				</select>
+				<input type="submit" value="Enter">
+			</form>
+		</b></div> {{end}} </p>
+
+		<h3> <a href="/profile"> View Profile </a>  </h3>
+		<h3> <a href="/logout"> Log out </a> </h3> 
+		<h3> <a href="/delete"> Delete account </a> </h3> 
+
+	</body>
+
+</html>

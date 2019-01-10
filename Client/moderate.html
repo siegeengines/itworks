@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title> ItWorks </title>
+	</head>
+
+	<body>
+		<h2> Unflag or delete posts </h2>
+
+
+		<p> {{range .}} <div> <b> User: {{.Username}} Time: {{.Timestamp}}  Votes: {{.Votes}}</b> {{.Content}} <b> 
+			<form action = "/moderate" method = "post">
+				<select name="choice">
+					<option value={{.IDuf}}> Unflag </option>
+					<option value="{{.IDr}}"> Remove </option>
+				</select>
+				<input type="submit" value="Enter">
+			</form>
+		</b></div> {{end}} </p>
+
+		<h3> <a href="/logout"> Log out </a> </h3> 
+		<h3> <a href="/delete"> Delete account </a> </h3> 
+
+	</body>
+
+</html>

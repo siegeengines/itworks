@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title> ItWorks </title>
+	</head>
+
+	<body>
+		<h1> Your Profile </h1>
+
+		<p> {{range .}} <div> User: {{.Username}} First Name: {{.Fname}} Last Name: {{.Lname}} Email: {{.Email}} Reputation: {{.Reputation}} </div> {{end}} </p>
+
+		<h3> <a href="/main"> Go back </a> </h3>
+		<h3> <a href="/logout"> Log out </a> </h3>
+		<h3> <a href="/delete"> Delete account </a> </h3> 
+
+	</body>
+
+</html>

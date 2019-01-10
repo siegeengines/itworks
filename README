@@ -1,0 +1,39 @@
+#README
+
+FIRST INSTALL:
+
+go
+
+libraries required(installation through terminal):
+apt-get -y install postgresql postgresql-contrib phppgadmin build-essential libpqxx-4.0 libpq-dev libpqxx-dev
+
+Backend server os: ubuntu 16.04lts
+
+FILES
+
+Client folder:
+client.go is the client server
+all of the html files are the html for the client side application
+
+Database folder:
+contains the sql file for creating the database headers
+
+Backend folder:
+sokcet.cpp is the backend server
+post.cpp / Post.h is the library for posts
+moderator.cpp / Moderator.h is the library for moderator
+user.cpp / User.h is the library for users
+
+
+RUNNING THE SERVERS
+
+Client:
+compilation in command line: go build client.go
+running the server: ./client
+
+Backend: 
+compilation in command line: g++ socket.cpp user.cpp post.cpp moderator.cpp -lpqxx -lpq -std=c++11 -o server
+running the server: ./server
+
+INTERACT WITH APPLICATION
+In a browser, go to http://localhost:8081
